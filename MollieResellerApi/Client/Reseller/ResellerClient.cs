@@ -32,18 +32,15 @@ namespace MollieResellerApi.Client.Reseller
 
         private readonly MollieConfigurationOptions _options;
         private readonly Action<string> _logger;
-        private readonly bool _isDevelopment;
 
         private static Uri GetBaseAddress() => new Uri($"{ApiEndPoint}/{ApiVersion}/");
 
         private static HttpClient CreateClient => new HttpClient { BaseAddress = GetBaseAddress() };
 
         public ResellerClient(
-            bool isDevelopment,
             MollieConfigurationOptions options,
             Action<string> logger)
         {
-            _isDevelopment = isDevelopment;
             _options = options;
             _logger = logger;
 
