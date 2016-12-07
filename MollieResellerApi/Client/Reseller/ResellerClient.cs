@@ -86,6 +86,11 @@ namespace MollieResellerApi.Client.Reseller
             return await PostAsync<BankAccountsResponse>(BankAccountsCommand, request);
         }
 
+        public async Task<BankAccountEditResponse> EditBankAccountMethodsAsync(BankAccountEditRequest request)
+        {
+            return await PostAsync<BankAccountEditResponse>(BankAccountEditCommand, request);
+        }
+
         public async Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request)
         {
             //  save hash, live and test key

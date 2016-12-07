@@ -19,5 +19,7 @@ namespace MollieResellerApi.Client.Reseller
         Task<AvailablePaymentMethodsResponse> AvailablePaymentMethodsAsync(AvailablePaymentMethodsRequest request);
 
         Task<BankAccountsResponse> GetBankAccountsMethodsAsync(BankAccountsRequest request);
+
+        Task<BankAccountEditResponse> EditBankAccountMethodsAsync(BankAccountEditRequest request);
     }
 }

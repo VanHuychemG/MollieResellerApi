@@ -2,7 +2,8 @@
 
 namespace MollieResellerApi.Models.Reseller.Account
 {
-    public class BankAccountsResponse
+    [XmlRoot("response")]
+    public class BankAccountsResponse : BaseResponse
     {
         [XmlArray("items")]
         [XmlArrayItem("bankaccount")]
