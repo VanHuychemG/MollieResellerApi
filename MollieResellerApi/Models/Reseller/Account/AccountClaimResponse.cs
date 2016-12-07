@@ -2,6 +2,7 @@
 
 namespace MollieResellerApi.Models.Reseller.Account
 {
+    [XmlRoot("response")]
     public class AccountClaimResponse : BaseResponse
     {
         [XmlElement("username")]

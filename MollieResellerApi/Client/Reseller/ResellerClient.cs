@@ -34,6 +34,8 @@ namespace MollieResellerApi.Client.Reseller
         public const string ProfileCreateCommand = "profile-create";
         public const string ProfileListCommand = "profiles";
 
+        public const string SetFeesCommand = "set-fees";
+
         private readonly HttpClient _client;
 
         private readonly MollieConfigurationOptions _options;
@@ -96,6 +98,11 @@ namespace MollieResellerApi.Client.Reseller
         public async Task<GetLoginLinkResponse> GetLoginLinkAsync(GetLoginLinkRequest request)
         {
             return await PostAsync<GetLoginLinkResponse>(GetLoginLinkCommand, request);
+        }
+
+        public async Task<SetFeesResponse> SetFeesAsync(SetFeesRequest request)
+        {
+            return await PostAsync<SetFeesResponse>(SetFeesCommand, request);
         }
 
         public async Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request)

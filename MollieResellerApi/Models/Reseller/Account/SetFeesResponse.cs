@@ -1,6 +1,9 @@
-﻿namespace MollieResellerApi.Models.Reseller.Account
+﻿using System.Xml.Serialization;
+
+namespace MollieResellerApi.Models.Reseller.Account
 {
-    public class SetFeesResponse
+    [XmlRoot("response")]
+    public class SetFeesResponse: BaseResponse
     {
 
     }
