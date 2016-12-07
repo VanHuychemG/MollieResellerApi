@@ -29,6 +29,8 @@ namespace MollieResellerApi.Client.Reseller
         public const string BankAccountEditCommand = "bankaccount-edit";
         public const string BankAccountsCommand = "bankaccounts";
 
+        public const string GetLoginLinkCommand = "get-login-link";
+
         public const string ProfileCreateCommand = "profile-create";
         public const string ProfileListCommand = "profiles";
 
@@ -89,6 +91,11 @@ namespace MollieResellerApi.Client.Reseller
         public async Task<BankAccountEditResponse> EditBankAccountMethodsAsync(BankAccountEditRequest request)
         {
             return await PostAsync<BankAccountEditResponse>(BankAccountEditCommand, request);
+        }
+
+        public async Task<GetLoginLinkResponse> GetLoginLinkAsync(GetLoginLinkRequest request)
+        {
+            return await PostAsync<GetLoginLinkResponse>(GetLoginLinkCommand, request);
         }
 
         public async Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request)

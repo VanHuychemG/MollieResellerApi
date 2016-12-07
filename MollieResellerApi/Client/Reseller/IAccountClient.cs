@@ -21,5 +21,7 @@ namespace MollieResellerApi.Client.Reseller
         Task<BankAccountsResponse> GetBankAccountsMethodsAsync(BankAccountsRequest request);
 
         Task<BankAccountEditResponse> EditBankAccountMethodsAsync(BankAccountEditRequest request);
+
+        Task<GetLoginLinkResponse> GetLoginLinkAsync(GetLoginLinkRequest request);
     }
 }
