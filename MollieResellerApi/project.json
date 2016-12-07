@@ -1,0 +1,27 @@
+{
+  "title": "MollieResellerApi",
+  "description": "MollieResellerApi by iframeworx.be",
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "version": "1.1.0"
+    },
+
+    "Newtonsoft.Json": "9.0.1",
+
+    "System.ComponentModel.Primitives": "4.3.0",
+    "System.Reflection.TypeExtensions": "4.3.0",
+    "System.Xml.XmlSerializer": "4.3.0"
+  },
+
+  "frameworks": {
+    "netcoreapp1.1": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8",
+        "dnxcore50"
+      ]
+    }
+  }
+}
