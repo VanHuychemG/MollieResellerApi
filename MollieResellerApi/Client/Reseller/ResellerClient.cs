@@ -26,6 +26,9 @@ namespace MollieResellerApi.Client.Reseller
 
         public const string AvailablePaymentMethodsCommand = "available-payment-methods";
 
+        public const string BankAccountEditCommand = "bankaccount-edit";
+        public const string BankAccountsCommand = "bankaccounts";
+
         public const string ProfileCreateCommand = "profile-create";
         public const string ProfileListCommand = "profiles";
 
@@ -76,6 +79,11 @@ namespace MollieResellerApi.Client.Reseller
         public async Task<AvailablePaymentMethodsResponse> AvailablePaymentMethodsAsync(AvailablePaymentMethodsRequest request)
         {
             return await PostAsync<AvailablePaymentMethodsResponse>(AvailablePaymentMethodsCommand, request);
+        }
+
+        public async Task<BankAccountsResponse> GetBankAccountsMethodsAsync(BankAccountsRequest request)
+        {
+            return await PostAsync<BankAccountsResponse>(BankAccountsCommand, request);
         }
 
         public async Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request)
