@@ -18,6 +18,7 @@ namespace MollieResellerApi.Client.Reseller
         public const string ApiVersion = "v1";
 
         //  Commands
+        public const string AccountClaimCommand = "account-claim";
         public const string AccountCreateCommand = "account-create";
         public const string AccountEditCommand = "account-edit";
         public const string AccountValidCommand = "account-valid";
@@ -45,6 +46,11 @@ namespace MollieResellerApi.Client.Reseller
             _logger = logger;
 
             _client = CreateClient;
+        }
+
+        public async Task<AccountClaimResponse> ClaimAccountAsync(AccountClaimRequest request)
+        {
+            return await PostAsync<AccountClaimResponse>(AccountClaimCommand, request);
         }
 
         public async Task<AccountCreateResponse> CreateAccountAsync(AccountCreateRequest request)

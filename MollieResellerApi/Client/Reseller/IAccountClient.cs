@@ -6,6 +6,8 @@ namespace MollieResellerApi.Client.Reseller
 {
     public interface IAccountClient
     {
+        Task<AccountClaimResponse> ClaimAccountAsync(AccountClaimRequest request);
+
         Task<AccountCreateResponse> CreateAccountAsync(AccountCreateRequest request);
 
         Task<AccountEditResponse> EditAccountAsync(AccountEditRequest request);
