@@ -6,8 +6,8 @@ namespace MollieResellerApi.Client.Reseller
 {
     public interface IProfileClient
     {
-        Task<CreateProfileResponse> CreateProfileAsync(CreateProfileRequest request);
+        Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request);
 
-        Task<GetProfilesResponse> GetProfilesAsync(GetProfilesRequest request);
+        Task<ProfilesResponse> GetProfilesAsync(ProfilesRequest request);
     }
 }

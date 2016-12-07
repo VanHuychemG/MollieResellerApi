@@ -1,6 +1,6 @@
 ﻿namespace MollieResellerApi.Models.Reseller.Account
 {
-    public class CreateAccountRequest : BaseRequest
+    public class AccountCreateRequest : BaseRequest
     {
         public string Username { get; set; }
 

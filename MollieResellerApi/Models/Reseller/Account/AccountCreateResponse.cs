@@ -3,12 +3,15 @@
 namespace MollieResellerApi.Models.Reseller.Account
 {
     [XmlRoot("response")]
-    public class EditAccountResponse
+    public class AccountCreateResponse: BaseResponse
     {
         [XmlElement("username")]
         public string Username { get; set; }
 
+        [XmlElement("password")]
+        public string Password { get; set; }
+
         [XmlElement("partner_id")]
-        public string PartnerId { get; set; }
+        public long PartnerId { get; set; }
     }
 }

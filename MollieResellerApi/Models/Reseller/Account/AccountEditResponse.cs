@@ -3,12 +3,12 @@
 namespace MollieResellerApi.Models.Reseller.Account
 {
     [XmlRoot("response")]
-    public class IsAccountValidResponse: BaseResponse
+    public class AccountEditResponse
     {
-        [XmlElement("exists")]
-        public bool Exists { get; set; }
+        [XmlElement("username")]
+        public string Username { get; set; }
 
         [XmlElement("partner_id")]
-        public long PartnerId { get; set; }
+        public string PartnerId { get; set; }
     }
 }

@@ -47,14 +47,14 @@ namespace MollieResellerApi.Client.Reseller
             _client = CreateClient;
         }
 
-        public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
+        public async Task<AccountCreateResponse> CreateAccountAsync(AccountCreateRequest request)
         {
-            return await PostAsync<CreateAccountResponse>(AccountCreateCommand, request);
+            return await PostAsync<AccountCreateResponse>(AccountCreateCommand, request);
         }
 
-        public async Task<EditAccountResponse> EditAccountAsync(EditAccountRequest request)
+        public async Task<AccountEditResponse> EditAccountAsync(AccountEditRequest request)
         {
-            return await PostAsync<EditAccountResponse>(AccountEditCommand, request);
+            return await PostAsync<AccountEditResponse>(AccountEditCommand, request);
         }
 
         public async Task<DisconnectAccountResponse> DisconnectAccountAsync(DisconnectAccountRequest request)
@@ -62,9 +62,9 @@ namespace MollieResellerApi.Client.Reseller
             return await PostAsync<DisconnectAccountResponse>(AccountDisconnectCommand, request);
         }
 
-        public async Task<IsAccountValidResponse> IsAccountValidAsync(IsAccountValidRequest request)
+        public async Task<AccountValidResponse> IsAccountValidAsync(AccountValidRequest request)
         {
-            return await PostAsync<IsAccountValidResponse>(AccountValidCommand, request);
+            return await PostAsync<AccountValidResponse>(AccountValidCommand, request);
         }
 
         public async Task<AvailablePaymentMethodsResponse> AvailablePaymentMethodsAsync(AvailablePaymentMethodsRequest request)
@@ -72,16 +72,16 @@ namespace MollieResellerApi.Client.Reseller
             return await PostAsync<AvailablePaymentMethodsResponse>(AvailablePaymentMethodsCommand, request);
         }
 
-        public async Task<CreateProfileResponse> CreateProfileAsync(CreateProfileRequest request)
+        public async Task<ProfileCreateResponse> CreateProfileAsync(ProfileCreateRequest request)
         {
             //  save hash, live and test key
-            return await PostAsync<CreateProfileResponse>(ProfileCreateCommand, request);
+            return await PostAsync<ProfileCreateResponse>(ProfileCreateCommand, request);
         }
 
-        public async Task<GetProfilesResponse> GetProfilesAsync(GetProfilesRequest request)
+        public async Task<ProfilesResponse> GetProfilesAsync(ProfilesRequest request)
         {
             // get the auto created profile based on hash and save the live key
-            return await PostAsync<GetProfilesResponse>(ProfileListCommand, request);
+            return await PostAsync<ProfilesResponse>(ProfileListCommand, request);
         }
 
         private async Task<T> PostAsync<T>(string command, object data)

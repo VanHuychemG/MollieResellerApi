@@ -6,13 +6,13 @@ namespace MollieResellerApi.Client.Reseller
 {
     public interface IAccountClient
     {
-        Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request);
+        Task<AccountCreateResponse> CreateAccountAsync(AccountCreateRequest request);
 
-        Task<EditAccountResponse> EditAccountAsync(EditAccountRequest request);
+        Task<AccountEditResponse> EditAccountAsync(AccountEditRequest request);
 
         Task<DisconnectAccountResponse> DisconnectAccountAsync(DisconnectAccountRequest request);
 
-        Task<IsAccountValidResponse> IsAccountValidAsync(IsAccountValidRequest request);
+        Task<AccountValidResponse> IsAccountValidAsync(AccountValidRequest request);
 
         Task<AvailablePaymentMethodsResponse> AvailablePaymentMethodsAsync(AvailablePaymentMethodsRequest request);
     }

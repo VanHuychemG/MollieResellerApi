@@ -1,6 +1,6 @@
 ﻿namespace MollieResellerApi.Models.Reseller.Profile
 {
-    public class GetProfilesRequest :BaseRequest
+    public class ProfilesRequest :BaseRequest
     {
         public string Username { get; set; }
 

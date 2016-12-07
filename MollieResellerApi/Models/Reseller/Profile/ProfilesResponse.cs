@@ -3,7 +3,7 @@
 namespace MollieResellerApi.Models.Reseller.Profile
 {
     [XmlRoot("response")]
-    public class GetProfilesResponse : BaseResponse
+    public class ProfilesResponse : BaseResponse
     {
         [XmlArray("items")]
         [XmlArrayItem("profile")]

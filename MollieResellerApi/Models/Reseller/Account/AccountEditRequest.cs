@@ -1,6 +1,6 @@
 ﻿namespace MollieResellerApi.Models.Reseller.Account
 {
-    public class EditAccountRequest : BaseRequest
+    public class AccountEditRequest : BaseRequest
     {
         public bool Testmode { get; set; }
 
